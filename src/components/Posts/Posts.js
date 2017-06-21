@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import {fetchPosts} from '../../actions';
 import _ from 'lodash';
 
@@ -28,7 +29,14 @@ class Posts extends PureComponent {
 
     render() {
         return (
-            <div className='text-center'>
+            <div style={{
+                padding: 10
+            }}>
+                <div className='text-right'>
+                    <Link to='/posts/new' className='btn btn-primary'>
+                        Create Post
+                    </Link>
+                </div>
                 <h3>Posts</h3>
                 <ul className='list-group'>{this.renderPosts()}</ul>
             </div>

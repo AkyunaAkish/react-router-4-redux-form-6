@@ -11,11 +11,26 @@ module.exports = {
     devtool: 'source-map',
     module: {
         rules: [{
-            test: /\.jsx?$/,
-            use: [{
-                loader: 'babel-loader'
-            }]
-        }]
+                test: /\.jsx?$/,
+                exclude: /(node_modules | bower_components)/,
+                use: [{
+                    loader: 'babel-loader'
+                }],
+            },
+            {
+                test: /\.s?css/,
+                exclude: /(node_modules | bower_components)/,
+                use: [{
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }]
+            }
+        ]
     },
     resolve: {
         extensions: ['.js', '.jsx']
