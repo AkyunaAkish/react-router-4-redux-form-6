@@ -19,9 +19,11 @@ class Posts extends PureComponent {
         return _.map(this.props.posts, (post, ind) => {
             if (post.content) {
                 return (
-                    <li className='list-group-item' key={ind}>
-                        {post.content}
-                    </li>
+                    <Link to={`/posts/${post.id}`} key={ind}>
+                        <li className='list-group-item'>
+                            {post.content}
+                        </li>
+                    </Link>
                 );
             }
         });
@@ -45,7 +47,7 @@ class Posts extends PureComponent {
 };
 
 function mapStateToProps(state) {
-    return {posts: state.posts};
+    return {posts: state.posts.posts};
 };
 
 export default connect(mapStateToProps, {fetchPosts})(Posts);

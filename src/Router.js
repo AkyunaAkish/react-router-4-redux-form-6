@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Posts from './components/Posts/Posts';
 import PostsNew from './components/PostsNew/PostsNew';
+import PostShow from './components/PostShow/PostShow';
 
 class Router extends PureComponent {
     constructor(props) {
@@ -20,6 +21,7 @@ class Router extends PureComponent {
                 <div>
                     <Switch>
                         <Route path='/posts/new' component={PostsNew}/>
+                        <Route path='/posts/:id' component={PostShow}/>
                         <Route path='/' component={Posts}/>
                     </Switch>
                 </div>
@@ -30,7 +32,8 @@ class Router extends PureComponent {
 
 export default Router;
 
-// NESTED ROUTES: To use nested routes, simply add a route component within the
+// NESTED ROUTES: 
+// To use nested routes, simply add a route component within the
 // JSX of one of your components make the beginning of the path the same as the
 // route related to the parent component and then give the route a unique route
 // path ending. The component will then be rendered within the parent component
