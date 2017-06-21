@@ -8,7 +8,7 @@ module.exports = {
         path: helpers.root('dist'),
         filename: 'bundle.js'
     },
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     module: {
         rules: [{
             test: /\.jsx?$/,
