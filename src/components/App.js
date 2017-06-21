@@ -1,0 +1,11 @@
+import React, {PureComponent} from 'react';
+
+class App extends PureComponent {
+    render() {
+        return (
+            <div>React simple starter</div>
+        );
+    }
+};
+
+export default App;
