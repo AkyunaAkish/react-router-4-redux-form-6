@@ -36,8 +36,9 @@ export default Router;
 // To use nested routes, simply add a route component within the
 // JSX of one of your components make the beginning of the path the same as the
 // route related to the parent component and then give the route a unique route
-// path ending. The component will then be rendered within the parent component
+// path ending. 
+// The component will then be rendered within the parent component
 // JSX where the route component is when that sub route is matched parent route
 // is <Route path='/posts/new' component={PostsNew}/> then within the PostsNew
-// component the following route is nested in the render JSX: <Route exact
-// path='/posts/new/duh' component={Hello}/>
+// component the following route is nested in the render JSX: 
+// <Route exact path='/posts/new/duh' component={Hello}/>
